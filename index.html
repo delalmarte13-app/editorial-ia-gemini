@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1220">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Editorial IA">
+<title>Editorial IA · Gemini</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>Editorial <span>IA</span> · asistente editorial</h1>
+  <div class="sub">Conectado a la API de Gemini. Tu clave se guarda protegida en el servidor.</div>
+</header>
+<main>
+  <section class="card">
+    <label for="agente">Tipo de tarea</label>
+    <select id="agente">
+      <option value="corrector">Correccion de estilo</option>
+      <option value="estilo">Guardia de estilo (voz del autor)</option>
+      <option value="estructura">Director editorial (estructura)</option>
+      <option value="libre">Consulta libre</option>
+    </select>
+
+    <label for="contexto">Texto de trabajo (pega aqui tu fragmento)</label>
+    <textarea id="contexto" placeholder="Pega el capitulo, cuento o fragmento que quieres trabajar..."></textarea>
+  </section>
+
+  <section class="card">
+    <label for="peticion">Tu peticion</label>
+    <textarea id="peticion" placeholder="Ejemplo: corrige este fragmento manteniendo mi voz y proponme solo los cambios importantes."></textarea>
+
+    <div class="row">
+      <button id="enviar">Consultar a Gemini</button>
+      <button id="limpiar" class="ghost">Limpiar</button>
+    </div>
+    <div class="estado" id="estado">Listo. Ctrl+Enter para enviar.</div>
+  </section>
+
+  <section class="card full">
+    <label>Respuesta</label>
+    <div id="respuesta"></div>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
+

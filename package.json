@@ -1,0 +1,6 @@
+{
+  "name": "editorial-ia-gemini",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mini-app editorial conectada a Gemini API en Vercel"
+}
